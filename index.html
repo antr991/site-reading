@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script rel="text/javascript" src="./js/timer.js"></script>
+    <script rel="text/javascript" src="./js/code.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <form onsubmit="return false;">
+        <button id="start_btn" onclick="StartClick(event)"></button>
+        <label for="volume">Количетсво слов в минуту:</label>
+        <input type="range" id="volume" name="volume" value="0" min="0" max="11" step="1">
+        <label for="curentNumber">Текущая скорость:</label>
+        <input type="number" id="curentNumber" name="curentNumber" min="60" max="500" value="60">
+        <label for="curentNumber">Кол-во слов за раз:</label>
+        <input type="number" id="ngrams" name="ngrams" min="1" max="10" value="1">
+        <label for="timerTime">Время (в секундах):</label>
+        <div>
+            <input type="time" id="timerTime" name="timerTime" min="00:01" max="00:30" step="1000" value="00:01">
+            <p></p>
+        </div>
+    </form>
+    <section>
+        <p id="word">WORD</p>
+    </section>
+    <div id="app"></div>
+</body>
+
+</html>
